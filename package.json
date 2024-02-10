@@ -1,0 +1,16 @@
+{
+  "name": "chebyshev-linkage-unit",
+  "version": "1.0.0",
+  "description": "Chebyshev link for Babylon.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babylon.js",
+    "webgl",
+    "3D"
+  ],
+  "author": "Octo8080X",
+  "license": "MIT"
+}
