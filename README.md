@@ -22,3 +22,5 @@ engine.runRenderLoop(function () {
 });
 
 ```
+
+![](./images/image00.png)
