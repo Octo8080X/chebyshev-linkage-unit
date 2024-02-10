@@ -924,6 +924,23 @@ export function createChebyshevLinkageUnit(
 
   return {
     power,
+    panel1,
+    panel2,
+    panel3,
+    panel3F,
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    b2,
+    b3,
+    b4,
+    b5,
+    b6,
+    b7,
     drive,
   };
 }
