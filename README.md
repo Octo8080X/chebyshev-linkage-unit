@@ -7,7 +7,7 @@ Chebyshev link for Babylon.js.
 ```js
 import * as BABYLON from "babylonjs";
 
-import { createChebyshevLinkageUnit } from "chebyshev-linkage-unit";
+import { createChebyshevLinkageUnit } from "http://esm.sh/chebyshev-linkage-unit";
 
 // ~ omission ~
 

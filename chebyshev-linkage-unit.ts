@@ -735,7 +735,7 @@ export function createChebyshevLinkageUnit(
     alpha,
   );
 
-  const panel3ToPanel1 = new BABYLON.LockConstraint(
+  const panel3ToPanel1 = new lBabylon.LockConstraint(
     new lBabylon.Vector3(0, 2 * thickness, 0),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -744,7 +744,7 @@ export function createChebyshevLinkageUnit(
   );
   panel3.body.addConstraint(panel1.body, panel3ToPanel1);
 
-  const panel3FToPanel1 = new BABYLON.LockConstraint(
+  const panel3FToPanel1 = new lBabylon.LockConstraint(
     new lBabylon.Vector3(0, -thickness, 0),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -753,7 +753,7 @@ export function createChebyshevLinkageUnit(
   );
   panel3F.body.addConstraint(panel1.body, panel3FToPanel1);
 
-  const panel2ToPanel1 = new BABYLON.LockConstraint(
+  const panel2ToPanel1 = new lBabylon.LockConstraint(
     new lBabylon.Vector3(0, 1 * thickness, 0),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -762,7 +762,7 @@ export function createChebyshevLinkageUnit(
   );
   panel2.body.addConstraint(panel1.body, panel2ToPanel1);
 
-  const powerToPanel1 = new BABYLON.HingeConstraint(
+  const powerToPanel1 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, thickness, 0),
     new lBabylon.Vector3(0, 0, -1),
     new lBabylon.Vector3(0, 1, 0),
@@ -771,7 +771,7 @@ export function createChebyshevLinkageUnit(
   );
   power.physics.body.addConstraint(panel1.body, powerToPanel1);
 
-  const p1ToPower = new BABYLON.LockConstraint(
+  const p1ToPower = new lBabylon.LockConstraint(
     new lBabylon.Vector3(0, thickness, 1),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -780,7 +780,7 @@ export function createChebyshevLinkageUnit(
   );
   power.physics.body.addConstraint(p1.physics.body, p1ToPower);
 
-  const p2ToPanel1 = new BABYLON.HingeConstraint(
+  const p2ToPanel1 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(2, -1 * thickness, -1),
     new lBabylon.Vector3(0, 1, 0),
@@ -789,7 +789,7 @@ export function createChebyshevLinkageUnit(
   );
   p2.physics.body.addConstraint(panel1.body, p2ToPanel1);
 
-  const p3ToPanel1 = new BABYLON.HingeConstraint(
+  const p3ToPanel1 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(-2, -1 * thickness, -1),
     new lBabylon.Vector3(0, 1, 0),
@@ -798,7 +798,7 @@ export function createChebyshevLinkageUnit(
   );
   p3.physics.body.addConstraint(panel1.body, p3ToPanel1);
 
-  const b2ToP2 = new BABYLON.LockConstraint(
+  const b2ToP2 = new lBabylon.LockConstraint(
     new lBabylon.Vector3(0, 0, -1.25),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -807,7 +807,7 @@ export function createChebyshevLinkageUnit(
   );
   b2.body.addConstraint(p2.physics.body, b2ToP2);
 
-  const b3ToP1 = new BABYLON.HingeConstraint(
+  const b3ToP1 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, -2.5),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -816,7 +816,7 @@ export function createChebyshevLinkageUnit(
   );
   b3.body.addConstraint(p1.physics.body, b3ToP1);
 
-  const b3ToP4 = new BABYLON.HingeConstraint(
+  const b3ToP4 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1 * thickness, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -825,7 +825,7 @@ export function createChebyshevLinkageUnit(
   );
   b3.body.addConstraint(p4.physics.body, b3ToP4);
 
-  const p4ToB2 = new BABYLON.HingeConstraint(
+  const p4ToB2 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 0, 1.25),
     new lBabylon.Vector3(0, 1, 0),
@@ -834,7 +834,7 @@ export function createChebyshevLinkageUnit(
   );
   p4.physics.body.addConstraint(b2.body, p4ToB2);
 
-  const b4ToP3 = new BABYLON.HingeConstraint(
+  const b4ToP3 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, -1.25),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -843,7 +843,7 @@ export function createChebyshevLinkageUnit(
   );
   b4.body.addConstraint(p3.physics.body, b4ToP3);
 
-  const p5ToB4 = new BABYLON.HingeConstraint(
+  const p5ToB4 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 0, 1.25),
     new lBabylon.Vector3(0, 1, 0),
@@ -852,7 +852,7 @@ export function createChebyshevLinkageUnit(
   );
   p5.physics.body.addConstraint(b4.body, p5ToB4);
 
-  const b5ToP4 = new BABYLON.HingeConstraint(
+  const b5ToP4 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(2, 0, 0),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -861,7 +861,7 @@ export function createChebyshevLinkageUnit(
   );
   b5.body.addConstraint(p4.physics.body, b5ToP4);
 
-  const p5ToB5 = new BABYLON.HingeConstraint(
+  const p5ToB5 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(-2, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -870,7 +870,7 @@ export function createChebyshevLinkageUnit(
   );
   p5.physics.body.addConstraint(b5.body, p5ToB5);
 
-  const b6ToP5 = new BABYLON.HingeConstraint(
+  const b6ToP5 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, -1.25),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -879,7 +879,7 @@ export function createChebyshevLinkageUnit(
   );
   b6.body.addConstraint(p5.physics.body, b6ToP5);
 
-  const p7ToB6 = new BABYLON.HingeConstraint(
+  const p7ToB6 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 0, 1.25),
     new lBabylon.Vector3(0, 1, 0),
@@ -888,7 +888,7 @@ export function createChebyshevLinkageUnit(
   );
   p7.physics.body.addConstraint(b6.body, p7ToB6);
 
-  const b7ToP7 = new BABYLON.HingeConstraint(
+  const b7ToP7 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(-2, 0, 0),
     new lBabylon.Vector3(0, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -897,7 +897,7 @@ export function createChebyshevLinkageUnit(
   );
   b7.body.addConstraint(p7.physics.body, b7ToP7);
 
-  const p6ToB7 = new BABYLON.HingeConstraint(
+  const p6ToB7 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, -.5 * thickness, 0),
     new lBabylon.Vector3(2, 0, 0),
     new lBabylon.Vector3(0, 1, 0),
@@ -906,7 +906,7 @@ export function createChebyshevLinkageUnit(
   );
   p6.physics.body.addConstraint(b7.body, p6ToB7);
 
-  const p6ToB3 = new BABYLON.HingeConstraint(
+  const p6ToB3 = new lBabylon.HingeConstraint(
     new lBabylon.Vector3(0, .5 * thickness, 0),
     new lBabylon.Vector3(0, 0, 2.5),
     new lBabylon.Vector3(0, 1, 0),
